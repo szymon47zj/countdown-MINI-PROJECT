@@ -1,0 +1,71 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #444;
+	font-weight: bold;
+	margin: 0;	
+}
+
+@keyframes odliczanie {
+	0% {
+		content: "10";
+		transform: scale(0.2);
+	}
+	10% {
+		content: "9";
+		transform: scale(0.4);
+	}
+	20% {
+		content: "8";
+		transform: scale(0.6);
+	}
+	30% {
+		content: "7";
+		transform: scale(0.8);
+	}
+	40% {
+		content: "6";
+	}
+	50% {
+		content: "5";
+		transform: scale(1.2);
+	}
+	60% {
+		content: "4";
+		transform: scale(1.4);
+	}
+	70% {
+		content: "3";
+		transform: scale(1.6);
+	}
+	80% {
+		content: "2";
+		transform: scale(1.8);
+	}
+	90% {
+		content: "1";
+		transform: scale(2);
+	}
+	100% {
+		content: "Kaboooom!";
+		transform: scale(2);
+	}
+}
+.counter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.counter:after {
+	animation: odliczanie 10s linear;
+	font-size: 60px;
+	content: "Kaboooom!";
+	color: white;
+	text-align: center;
+	transform: scale(2);
+}
